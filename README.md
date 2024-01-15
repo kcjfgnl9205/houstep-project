@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# 두번째 | Web & Mobile App Front-end 개발자 채용 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Front-end 개발자 채용 과제로 제시된 요구사항 구현
 
-## Available Scripts
+## 페이지별 주요 기능
 
-In the project directory, you can run:
+- 홈(`/`)
 
-### `npm start`
+  - 주문목록 페이지로 이동가능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 주문목록(`/order`)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  - 헤더는 상단, 총 주문내역은 하단에 고정
+  - 아이템을 불러오기 전까지 로딩상태 표시
+  - 주문 아이템개수 조작 가능
+    - 최소주문수량 1개, 최대주문수량 999개까지 주문 가능(합계 수량이 0일경우 주문 불가)
+    - 각 아이템의 가격과 총 가격, 수량이 일치
+  - 주문 수량이 1개 이상인 경우 아이템 배경생 변경 바꾸기
+  - 주문하기 클릭후 로딩중인 상태 하단 버튼에 표시
 
-### `npm test`
+- 성공(`/complete`), 실패(`/error`)
+  - 일정 시간 (3초) 경과 후 자동으로 주문목록 페이지로 이동
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 기술스택
 
-### `npm run build`
+- React(Create React App) + Typescript
+- Zustand
+- styled-components
+- eslint, prettier
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 프로젝트 설치 및 실행 방법
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/kcjfgnl9205/houstep-project.git .
+npm install
+npm run server
+npm run start
+```
